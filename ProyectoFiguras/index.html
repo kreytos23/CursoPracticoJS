@@ -4,19 +4,118 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
     <title>Figuras Geométricas</title>
 </head>
-<body>
+<body class="bg-dark"> 
     <header>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid d-flex justify-content-center">
+                <img src="./assets/geometrico.png" alt="" width="30" height="24">
+                <span class="fw-bold fs-4 ms-3">Figuras Geométricas</span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container-fluid mt-4 bg-dark">
+            <div class="row d-flex justify-content-evenly">
+                <div class="col-3 card-square">
+                    <div class="card text-center">
+                        <div class="card-header fw-bold text-capitalize">
+                            Calcula el Perimetro y Area de un Cuadrado
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <label for="medidaLado" class="form-label text-capitalize fw-normal fst-italic">Introduce la medida de un lado del cuadrado</label>
+                                <div class="mb-3 input-group">
+                                    <input type="number" class="form-control" aria-label="Text input with dropdown button" id ="medidaLado" required placeholder="1, 2, 3 ...">
+                                    <span class="input-group-text">cm</span>
+                                </div>
+                                <div class="card-buttons d-flex justify-content-evenly">
+                                    <button class="btn btn btn-outline-dark mt-3" onclick="calcularPerimetroCuadrado()" type="button">Perímetro</button>
+                                    <button class="btn btn btn-dark mt-3" onclick="calcularAreaCuadrado()" type="button">Area</button>
+                                </div>
+                                <div class="mb-3 mt-3">
+                                    <label for="resultadosCuadrado" class="form-label">Resultados</label>
+                                    <textarea readonly class="form-control text-center fw-bold" id="resultadosCuadrado" rows="2"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 card-trinagle">
+                    <div class="card">
+                        <div class="card-header fw-bold text-capitalize text-center">
+                            Calcula el Perimetro y Area de un Triangulo
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <label for="medidaLadoTrianguloA" class="form-label text-capitalize fw-normal fst-italic d-block text-center mb-4">Introduce las medidas del Triangulo</label>
+                                <div class="mb-3 input-group">
+                                    <input type="number" class="form-control" aria-label="Text input with dropdown button" id ="medidaLadoTrianguloA" required placeholder="Lado A">
+                                    <span class="input-group-text">cm</span>   
+                                </div>
+                                <div class="mb-3 input-group">
+                                    <input type="number" class="form-control" aria-label="Text input with dropdown button" id ="medidaLadoTrianguloB" required placeholder="Lado B">
+                                    <span class="input-group-text">cm</span>   
+                                </div>
+                                <div class="mb-3 input-group">
+                                    <input type="number" class="form-control" aria-label="Text input with dropdown button" id ="baseTriangulo" required placeholder="Base">
+                                    <span class="input-group-text">cm</span>   
+                                </div>
+                                <div class="mb-3 input-group">
+                                    <input type="number" class="form-control" aria-label="Text input with dropdown button" id ="alturaTriangulo" required placeholder="Altura">
+                                    <span class="input-group-text">cm</span>   
+                                </div>
+                                <div class="card-buttons d-flex justify-content-evenly">
+                                    <button class="btn btn btn-outline-dark mt-3" onclick="calcularPerimetroTriangulo()" type="button">Perímetro</button>
+                                    <button class="btn btn btn-dark mt-3" onclick="calcularAreaTriangulo()" type="button">Area</button>
+                                </div>
+                                <div class="mb-3 mt-3">
+                                    <label for="resultadosTriangulo" class="form-label">Resultados</label>
+                                    <textarea readonly class="form-control text-center fw-bold" id="resultadosTriangulo" rows="2"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 card-circle">
+                    <div class="card">
+                        <div class="card-header fw-bold text-capitalize text-center">
+                            Calcula el Perimetro y Area de un Circulo
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <label for="radioCirculo" class="form-label text-capitalize fw-normal fst-italic d-block text-center mb-4">Introduce el radio del Circulo</label>
+                                <div class="mb-3 input-group">
+                                    <input type="number" class="form-control" aria-label="Text input with dropdown button" id ="radioCirculo" required placeholder="1, 2, 3 ...">
+                                    <span class="input-group-text">cm</span>
+                                </div>
+                                <div class="card-buttons d-flex justify-content-evenly">
+                                    <button class="btn btn btn-outline-dark mt-3" onclick="calcularPerimetroCirculo()" type="button">Perímetro</button>
+                                    <button class="btn btn btn-dark mt-3" onclick="calcularAreaCirculo()" type="button">Area</button>
+                                </div>
+                                <div class="mb-3 mt-3">
+                                    <label for="resultadosCirculo" class="form-label">Resultados</label>
+                                    <textarea readonly class="form-control text-center fw-bold" id="resultadosCirculo" rows="2"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- <header>
         <img src="./assets/geometrico.png" alt="Figuras geometricas">
         <h1>Figuras Geométricas</h1>
     </header>
-    <main>
-        <section class="cards">
+    <main> -->
+        <!-- <section class="cards">
             <div class="card-cuadrado">
                 <h2>Calcula el Perímetro y Área de un Cuadrado</h2>
                 <form action="">
@@ -30,8 +129,7 @@
                     </div>
                 </form>
             </div>
-        </section>
-            
+        </section>-->
             <!-- <div class="card-triangulo">
                 <h2>Calcula el Perímetro y Área de un Triangulo</h2>
                 <form action="">
@@ -63,7 +161,8 @@
                 </form>
                 </section>
             </div> -->
-    </main>
+    <!-- </main> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="./figuras.js"></script>
 </body>
 </html>
