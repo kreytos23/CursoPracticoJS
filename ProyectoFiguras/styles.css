@@ -6,6 +6,7 @@
 
 html {
     font-family: 'Lato', sans-serif !important;
+    
 }
 
 header {
@@ -20,4 +21,8 @@ header img {
 
 .card-square button,.card-trinagle button,.card-circle button {
     width: 100px;
+}
+
+.card-radious {
+    border-radius: 1.5rem !important;
 }
