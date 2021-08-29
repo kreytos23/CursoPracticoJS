@@ -1,2 +1,2 @@
-# Aplicaci-nDeMate
-Repositorio de aplicación de operaciones aritméticas hecha en JavaScript
+# AplicaciónDeMate
+Repositorio de aplicacion de operaciones aritmeticas hecha en JavaScript
