@@ -27,6 +27,11 @@ header img {
     border-radius: 1.5rem !important;
 }
 
+.card-radious-bottom {
+    border-bottom-left-radius:  1.5rem !important;
+    border-bottom-right-radius:  1.5rem !important;
+}
+
 .card-title {
     font-size: 20px !important;
 }
@@ -53,4 +58,9 @@ header img {
 .final-price {
     font-size: 60px;
     color: #3C5441;
+}
+
+footer {
+    color: aliceblue;
+    margin-top: 5rem;
 }
