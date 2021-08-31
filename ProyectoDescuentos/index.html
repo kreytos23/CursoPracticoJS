@@ -4,9 +4,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
     <title>Descuentos</title>
 </head>
-<body>
+<body class="bg-dark">
+    <header>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid d-flex justify-content-center">
+                <img src="./assets/dolar.png" alt="" width="30" height="24">
+                <span class="fw-bold fs-4 mx-3 text-capitalize">Generador de precios</span>
+                <img src="./assets/dolar.png" alt="" width="30" height="24">
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 offset-3 mt-5">
+                        <div class="card text-center card-radious">
+                            <div class="card-header text-capitalize fw-bold card-title">
+                                ¡Coloca el precio original y el descuento!
+                            </div>
+                            <div class="card-body px-5 bg-card card-radious">
+                                <form>
+                                    <label for="precioInicial" class="form-label text-capitalize fw-normal fst-italic">Introduce el precio inicial</label>
+                                    <div class="mb-3 input-group">
+                                        <span class="input-group-text">$</span>
+                                        <input type="number" class="form-control" aria-label="Text input" id ="precioInicial" required placeholder="1, 2, 3 ...">
+                                    </div>
+                                    <label for="porcentajeDescuento" class="form-label text-capitalize fw-normal fst-italic">Introduce el porcentaje</label>
+                                    <div class="mb-3 input-group">
+                                        <input type="number" class="form-control" aria-label="Text input" id ="porcentajeDescuento" required placeholder="70, 80, 15 ...">
+                                        <span class="input-group-text">%</span>   
+                                    </div>
+                                </form>
+                                <button class="btn btn-primary text-capitalize btn-background btn-lg" type="button" onclick="imprimirPrecio()">Calcula precio final</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 offset-3 mt-5">
+                        <div class="card text-center card-radious">
+                            <div class="card-header text-capitalize fw-bold card-title">
+                                El precio final será ....
+                            </div>
+                            <div class="card-body px-5 bg-card card-radious">
+                                <div class="container text-capitalize text-center fw-bold final-price" id="final-price">
+                                    $0.00
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="./descuentos.js"></script>
 </body>
 </html>

@@ -6,4 +6,13 @@ function precioFinal(precioOriginal, descuento) {
     return final;
 }
 
-console.log(precioFinal(precioOriginal, descuento));
+function imprimirPrecio() {
+    const precioInicial = document.getElementById("precioInicial");
+    const porcentaje = document.getElementById("porcentajeDescuento");
+    const resultado = document.getElementById("final-price");
+
+    const precio = precioFinal(Number(precioInicial.value), Number(porcentaje.value));
+
+    resultado.innerText = `$ ${precio}`;
+
+}

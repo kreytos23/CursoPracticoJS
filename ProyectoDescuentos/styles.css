@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+html {
+    font-family: 'Lato', sans-serif !important;
+    
+}
+
+header {
+    color: aliceblue;
+}
+
+header img {
+    width: 25px;
+    height: 25px;
+}
+
+.bg-card {
+    background: rgb(223,161,210);
+    background: linear-gradient(232deg, rgba(223,161,210,0.7287289915966386) 21%, rgba(198,99,192,0.6783088235294117) 73%);
+}
+
+.card-radious {
+    border-radius: 1.5rem !important;
+}
+
+.card-title {
+    font-size: 20px !important;
+}
+
+.btn-background {
+    background-color: rgb(161, 223, 174);
+    border: none;
+}
+
+.btn-background:hover {
+    background-color: #79A783
+    
+}
+.btn-background:focus {
+    box-shadow: 0 0 0 0.25rem rgb(121 167 131 / 50%) !important;
+    background-color: #79A783 !important;
+}
+
+.btn-background:active {
+    background-color: #79A783 !important;
+    
+}
+
+.final-price {
+    font-size: 60px;
+    color: #3C5441;
+}
