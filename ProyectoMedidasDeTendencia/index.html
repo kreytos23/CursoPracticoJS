@@ -1,15 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Medidad De Tendencia Central</title>
-</head>
-<body>
-    <div class="container">
-
-    </div>
+  </head>
+  <body class="bg-transparent text-dark">
+    <header>
+      <nav class="navbar navbar-dark">
+          <div class="container-fluid d-flex justify-content-center">
+              <img src="./assets/grafica.png" alt="" width="30" height="24">
+              <span class="fw-bold fs-4 mx-3">Medidas de Tendencia Central</span>
+              <img src="./assets/grafica.png" alt="" width="30" height="24">
+          </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-6 offset-3 text-center fs-4 fw-bold">
+            <p class="main-title">🚀 Tercer Taller Del Curso Práctico De JS 🚀</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 offset-3 mt-2">
+              <div class="card text-center card-radious card-heigth text-white bg-secondary card-radious">
+                  <div class="card-header text-capitalize fw-bold card-title">
+                      ¡Calcula la Media, Mediana y Moda!
+                  </div>
+                  <div class="card-body px-5 bg-card card-radious-bottom .card-radious-bottom">
+                      <form class="px-2 mt-3">
+                          <label for="valoresComa" class="form-label text-capitalize fw-normal fst-italic mb-3">Introduce tus valores separados por comas</label>
+                          <div class="mb-3 input-group">
+                              <input type="text" class="form-control" aria-label="Text input" id ="valoresComa" required placeholder="1,2,3,4 ...">
+                          </div>
+                      </form>
+                      <div class="buttons d-flex justify-content-evenly mt-4">
+                        <button class="btn btn-primary text-capitalize btn-background btn-lg" type="button" onclick="getMedia()">Media</button>
+                        <button class="btn btn-primary text-capitalize btn-background btn-lg" type="button" onclick="getMediana()">Mediana</button>
+                        <button class="btn btn-primary text-capitalize btn-background btn-lg" type="button" onclick="getModa()">Moda</button>
+                      </div>
+                      <p class="text-capitalize fw-normal fst-italic mt-3">Resultado...</p>
+                      <div class="container text-capitalize text-center fw-bold final-price pt-2" id="final">
+                        7u7
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+    </main>
     <script src="./medidas.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+  </body>
 </html>
